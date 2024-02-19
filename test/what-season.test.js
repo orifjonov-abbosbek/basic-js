@@ -13,7 +13,7 @@ describe('What season', () => {
     // Presence requirement
 
     describe('variable presence', () => {
-        it.optional('function getSeason exists', () => {
+        it.optional('function getSeason exist   s', () => {
             expect(getSeason).to.exist;
             expect(getSeason).to.be.instanceOf(Function);
         });
