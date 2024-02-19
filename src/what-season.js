@@ -16,31 +16,28 @@ function getSeason(date) {
 
   try {
     if (date === undefined) {
-      return "invalid data and time";
+      return "Unable to determine the time of year!";
     }
 
     if (!(date instanceof Date) || isNaN(date)) {
-      throw new Error("invalid date!");
+      throw new Error("Invalid date!");
     }
 
     const month = date.getMonth();
 
     if (month >= 2 && month <= 4) {
-      return 'spring';
+      return "spring";
     } else if (month >= 5 && month <= 7) {
-      return 'summer';
+      return "summer";
     } else if (month >= 8 && month <= 10) {
-      return 'autumn';
+      return "autumn";
     } else {
-      return 'winter';
+      return "winter";
     }
-
   } catch (err) {
-    throw new Error("invalid date!");
+    throw new Error("Invalid date!");
   }
 }
-
-
 
 getSeason();
 module.exports = {
